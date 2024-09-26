@@ -10,6 +10,18 @@ body {
     background-color: black;
     color: white;
     line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Send to back */
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.2));
+    transition: background 0.5s ease;
 }
 
 header {
@@ -75,6 +87,8 @@ nav a:hover {
     text-decoration: none;
     font-weight: bold;
     transition: transform 0.3s ease, background 0.3s ease;
+    display: inline-block; /* Ensure block behavior */
+    margin-top: 20px; /* Space above button */
 }
 
 .btn:hover {
@@ -183,3 +197,18 @@ footer {
     }
 }
 
+/* Mouse Animation */
+body {
+    cursor: none; /* Hide the default cursor */
+}
+
+.mouse-pointer {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(243, 156, 18, 0.7);
+    pointer-events: none; /* Ignore pointer events */
+    transition: transform 0.1s ease;
+    transform: scale(1.5); /* Scale for better visibility */
+}
