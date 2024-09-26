@@ -1,3 +1,4 @@
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -8,12 +9,13 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: black;
     color: white;
+    line-height: 1.6;
 }
 
 header {
     background: rgba(255, 255, 255, 0.1);
     color: #fff;
-    padding: 10px 20px;
+    padding: 20px 40px;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -28,20 +30,23 @@ nav ul {
 nav a {
     color: #fff;
     text-decoration: none;
-    padding: 10px;
-    transition: color 0.3s ease;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 nav a:hover {
-    color: #f39c12;
+    background: #f39c12;
+    color: #000;
 }
 
+/* Hero Section */
 .hero {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 100px 20px;
-    animation: slideIn 1s ease-in-out;
+    padding: 100px 40px;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .text-container {
@@ -51,6 +56,7 @@ nav a:hover {
 .photo-container {
     width: 50%;
     border: 5px solid #f39c12; /* Colored border */
+    border-radius: 10px;
     padding: 10px;
     transition: transform 0.3s;
 }
@@ -63,17 +69,51 @@ nav a:hover {
 .btn {
     background: #f39c12;
     color: #fff;
-    padding: 10px 20px;
+    padding: 15px 25px;
     border: none;
     border-radius: 5px;
     text-decoration: none;
-    transition: transform 0.3s ease;
+    font-weight: bold;
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .btn:hover {
     transform: scale(1.1);
+    background: #e67e22;
 }
 
+/* Section Styles */
+.section {
+    padding: 80px 40px;
+    animation: slideIn 1s ease-in-out;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+.achievement-list, .project-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.achievement-list li, .project-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    width: 80%;
+    transition: transform 0.3s;
+}
+
+.achievement-list li:hover, .project-card:hover {
+    transform: translateY(-5px);
+}
+
+/* LinkedIn Button */
 .linkedin-logo {
     position: fixed;
     bottom: 20px;
@@ -82,8 +122,8 @@ nav a:hover {
 }
 
 .linkedin-logo img {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
 }
 
 .linkedin-logo:hover {
@@ -97,7 +137,16 @@ footer {
     padding: 20px 0;
 }
 
-/* Animation */
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 @keyframes slideIn {
     from {
         transform: translateY(-50%);
@@ -133,3 +182,4 @@ footer {
         border-color: transparent;
     }
 }
+
