@@ -213,7 +213,7 @@ body {
     position: fixed;
     width: 30px; /* Increased size for visibility */
     height: 30px;
-    border-radius: 50%;
+    border-radius: 25%;
     background: rgba(243, 156, 18, 0.7);
     pointer-events: none; /* Ignore pointer events */
     transition: transform 0.1s ease;
@@ -232,6 +232,7 @@ body {
         width: 100%;
     }
 }
+
 
 
 
