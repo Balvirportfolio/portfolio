@@ -24,3 +24,9 @@ document.addEventListener('click', (e) => {
         clickEffect.remove();
     }, 500);
 });
+
+    // Remove effect after animation
+    setTimeout(() => {
+        clickEffect.remove();
+    }, 500);
+});
