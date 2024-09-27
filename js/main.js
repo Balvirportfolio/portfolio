@@ -13,7 +13,33 @@ document.querySelectorAll('nav a').forEach(anchor => {
     });
 });
 
-// Remove default cursor
+// Hide default cursor
 document.body.style.cursor = 'none';
 
+// Create highlight effect
+const highlightEffect = document.createElement('div');
+highlightEffect.classList.add('highlight-effect');
+document.body.appendChild(highlightEffect);
+
+// Update highlight effect position
+document.addEventListener('mousemove', (e) => {
+    highlightEffect.style.left = `${e.pageX}px`;
+    highlightEffect.style.top = `${e.pageY}px`;
+});
+
+// Style for the highlight effect
+const style = document.createElement('style');
+style.innerHTML = `
+    .highlight-effect {
+        position: fixed;
+        width: 100px; /* Adjust size as needed */
+        height: 100px; /* Adjust size as needed */
+        background: rgba(243, 156, 18, 0.5); /* Brightening color */
+        border-radius: 50%;
+        pointer-events: none; /* Ignore pointer events */
+        transform: translate(-50%, -50%); /* Center the highlight */
+        transition: background 0.2s ease; /* Smooth transition for background */
+    }
+`;
+document.head.appendChild(style);
 
