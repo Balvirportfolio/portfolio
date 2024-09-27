@@ -151,28 +151,32 @@ footer {
 /* Mouse Animation */
 .mouse-pointer {
     position: fixed;
-    width: 10px; /* Smaller size for the pointer */
+    width: 10px; /* Size for the pointer */
     height: 10px;
-    border-radius: 50%; /* Adjusted for a circular shape */
+    border-radius: 50%; /* Circular shape */
     background: rgba(243, 156, 18, 0.7);
     pointer-events: none; /* Ignore pointer events */
     transition: transform 0.1s ease;
-    box-shadow: 0 0 15px rgba(243, 156, 18, 0.7), 0 0 30px rgba(243, 156, 18, 0.5); /* Increased glow effect */
 }
 
 /* Brightness Effect */
 .brightness-effect {
-    position: fixed;
+    position: absolute; /* Position based on mouse */
     width: 100px; /* Size of the brightening area */
     height: 100px; /* Size of the brightening area */
     background: rgba(243, 156, 18, 0.3); /* Brightening color */
     border-radius: 50%; /* Circular shape */
     pointer-events: none; /* Ignore pointer events */
     transform: translate(-50%, -50%); /* Center the highlight */
-    transition: background 0.2s ease; /* Smooth transition for background */
-    filter: brightness(1.5); /* Increase brightness */
+    transition: opacity 0.2s ease; /* Smooth transition for visibility */
+    opacity: 0; /* Initially hidden */
     z-index: 1; /* Ensure it appears above content */
 }
+
+.brightness-effect.active {
+    opacity: 1; /* Make visible when active */
+}
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
