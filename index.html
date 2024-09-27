@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Almendra+Display|Almendra+SC|Piedra&display=swap" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Jolly+Lodger' rel='stylesheet' type='text/css'>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
     <style>
@@ -15,7 +15,7 @@
             overflow: hidden;
             margin: 0;
             background-color: #000; /* Dark background */
-            color: springgreen; /* Text color */
+            color: #FFA500; /* Updated text color */
         }
         #particles-js {
             position: absolute;
@@ -31,10 +31,42 @@
         }
         .btn {
             margin: 10px; /* Spacing between buttons */
+            background-color: #FF4500; /* Updated button color */
+            border: none; /* Remove border */
+            color: #fff; /* White text color for buttons */
+        }
+        .btn:hover {
+            background-color: #FF6347; /* Lighter color on hover */
         }
         h1 {
             font-family: 'Jolly Lodger', cursive; /* Use the specified font */
             font-size: 35px; /* Set the size for better visibility */
+        }
+        h2 {
+            font-family: 'Almendra Display', serif; /* Title font */
+            font-size: 40px; /* Title size */
+            color: #FFD700; /* Gold color for title */
+            margin-bottom: 20px; /* Space below title */
+        }
+        .about-container {
+            display: flex; /* Flexbox for layout */
+            align-items: center; /* Center vertically */
+            justify-content: center; /* Center horizontally */
+            padding: 20px;
+        }
+        .about-text {
+            text-align: left; /* Align text to the left */
+            margin-right: 20px; /* Space between text and image */
+            max-width: 400px; /* Limit the width of the text */
+        }
+        .about-image {
+            width: 200px; /* Set the width for the image */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px; /* Rounded corners for the image */
+        }
+        footer {
+            margin-top: 20px;
+            color: #FFA500; /* Updated footer text color */
         }
     </style>
 </head>
@@ -42,13 +74,27 @@
     <div id="particles-js"></div>
     
     <div class="content">
+        <h2>My Awesome Portfolio</h2> <!-- Added title -->
         <h1>Welcome to My Portfolio</h1>
         <div>
-            <a href="index.html" class="btn btn-success">Home</a>
-            <a href="achievements.html" class="btn btn-primary">Achievements</a>
-            <a href="projects.html" class="btn btn-warning">Projects</a>
+            <a href="index.html" class="btn">Home</a>
+            <a href="achievements.html" class="btn">Achievements</a>
+            <a href="projects.html" class="btn">Projects</a>
+        </div>
+
+        <!-- About Section -->
+        <div class="about-container">
+            <div class="about-text">
+                <h2>About:</h2>
+                <p>Welcome to my portfolio! I am a passionate developer with experience in various technologies. I love creating innovative solutions and constantly learning new skills.</p>
+            </div>
+            <img src="path/to/your/image.jpg" alt="About Me" class="about-image"> <!-- Replace with your image path -->
         </div>
     </div>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p> <!-- Change Your Name to your actual name -->
+    </footer>
 
     <script>
         particlesJS('particles-js', {
@@ -61,7 +107,7 @@
                     }
                 },
                 "color": {
-                    "value": "#FFFFFF" /* Change particle color to white */
+                    "value": "#FFA500" /* Change particle color to orange */
                 },
                 "shape": {
                     "type": "circle",
@@ -101,7 +147,7 @@
                 "line_linked": {
                     "enable": true,
                     "distance": 150,
-                    "color": "#FFFFFF", /* Changed line color to white */
+                    "color": "#FFA500", /* Changed line color to orange */
                     "opacity": 0.4,
                     "width": 1
                 },
@@ -162,6 +208,7 @@
     </script>
 </body>
 </html>
+
 
 
 
