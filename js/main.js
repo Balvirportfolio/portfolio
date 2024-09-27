@@ -36,7 +36,3 @@ document.addEventListener('mousemove', (e) => {
 // Hide default cursor
 document.body.style.cursor = 'none';
 
-});
-
-// Optional: Hide the default cursor (included in CSS)
-document.body.style.cursor = 'none';
