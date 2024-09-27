@@ -24,6 +24,20 @@ body {
     transition: background 0.5s ease;
 }
 
+/* Page Transition Styles */
+.fade {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
 /* Header Styles */
 header {
     background: rgba(255, 255, 255, 0.1);
@@ -114,13 +128,15 @@ h2 {
     font-size: 2.5em;
 }
 
-.achievement-list, .project-list {
+.achievement-list,
+.project-list {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.achievement-list li, .project-card {
+.achievement-list li,
+.project-card {
     background: rgba(255, 255, 255, 0.1);
     padding: 20px;
     border-radius: 10px;
@@ -129,7 +145,8 @@ h2 {
     transition: transform 0.3s;
 }
 
-.achievement-list li:hover, .project-card:hover {
+.achievement-list li:hover,
+.project-card:hover {
     transform: translateY(-5px);
 }
 
@@ -211,14 +228,14 @@ body {
 
 .mouse-pointer {
     position: fixed;
-    width: 30px; /* Increased size for visibility */
-    height: 30px;
-    border-radius: 25%;
+    width: 20px; /* Smaller size for the pointer */
+    height: 20px;
+    border-radius: 50%; /* Adjusted for a circular shape */
     background: rgba(243, 156, 18, 0.7);
     pointer-events: none; /* Ignore pointer events */
     transition: transform 0.1s ease;
     transform: scale(1.5); /* Scale for better visibility */
-    box-shadow: 0 0 10px rgba(243, 156, 18, 0.5), 0 0 20px rgba(243, 156, 18, 0.4); /* Glow effect */
+    box-shadow: 0 0 15px rgba(243, 156, 18, 0.7), 0 0 30px rgba(243, 156, 18, 0.5); /* Increased glow effect */
 }
 
 /* Responsive Styles */
@@ -227,11 +244,14 @@ body {
         flex-direction: column;
         padding: 50px 20px;
     }
-    
-    .text-container, .photo-container {
+
+    .text-container,
+    .photo-container {
         width: 100%;
     }
 }
+
+
 
 
 
