@@ -52,55 +52,6 @@ nav a:hover {
     color: #000;
 }
 
-/* Hero Section */
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 100px 40px;
-    animation: fadeIn 1s ease-in-out;
-}
-
-.text-container {
-    width: 50%;
-}
-
-.photo-container {
-    width: 50%;
-    border: 5px solid #f39c12; /* Colored border */
-    border-radius: 10px;
-    padding: 10px;
-    transition: transform 0.3s;
-}
-
-.profile-photo {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.btn {
-    background: #f39c12;
-    color: #fff;
-    padding: 15px 25px;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: transform 0.3s ease, background 0.3s ease;
-    display: inline-block; /* Ensure block behavior */
-    margin-top: 20px; /* Space above button */
-}
-
-.btn:hover {
-    transform: scale(1.1);
-    background: #e67e22;
-}
-
-/* Adjust button position */
-.text-container p {
-    margin-bottom: 30px; /* Added margin for better spacing */
-}
-
 /* Section Styles */
 .section {
     padding: 80px 40px;
@@ -157,15 +108,6 @@ footer {
 }
 
 /* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
 @keyframes slideIn {
     from {
         transform: translateY(-50%);
@@ -174,31 +116,6 @@ footer {
     to {
         transform: translateY(0);
         opacity: 1;
-    }
-}
-
-/* Typing Animation */
-.typing {
-    font-family: 'Courier Prime', monospace;
-    border-right: .15em solid #f39c12;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 0; /* Hidden until animated */
-    animation: typing 4s steps(30, end), blink .75s step-end infinite;
-}
-
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%; /* Full text width */
-    }
-}
-
-@keyframes blink {
-    50% {
-        border-color: transparent;
     }
 }
 
@@ -218,11 +135,6 @@ body {
     transform: scale(1.5); /* Scale for better visibility */
 }
 
-/* Adjusting background color dynamically */
-.brightened-background {
-    background: radial-gradient(circle at center, rgba(243, 156, 18, 0.6), rgba(0, 0, 0, 0.6));
-    transition: background 0.3s ease;
-}
 
 
 
