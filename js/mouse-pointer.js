@@ -26,6 +26,7 @@ document.addEventListener('click', (e) => {
 });
 
 
+
     // Remove effect after animation
     setTimeout(() => {
         clickEffect.remove();
