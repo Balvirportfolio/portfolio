@@ -13,31 +13,32 @@ document.querySelectorAll('nav a').forEach(anchor => {
     });
 });
 
-// Create highlight effect
-const highlightEffect = document.createElement('div');
-highlightEffect.classList.add('highlight-effect');
-document.body.appendChild(highlightEffect);
+// Create a div for the brightness effect
+const brightnessEffect = document.createElement('div');
+brightnessEffect.classList.add('brightness-effect');
+document.body.appendChild(brightnessEffect);
 
-// Update highlight effect position
+// Update brightness effect position and size
 document.addEventListener('mousemove', (e) => {
-    highlightEffect.style.left = `${e.pageX}px`;
-    highlightEffect.style.top = `${e.pageY}px`;
+    brightnessEffect.style.left = `${e.pageX}px`;
+    brightnessEffect.style.top = `${e.pageY}px`;
 });
 
-// Style for the highlight effect
+// Style for the brightness effect
 const style = document.createElement('style');
 style.innerHTML = `
-    .highlight-effect {
+    .brightness-effect {
         position: fixed;
-        width: 60px; /* Size of the highlight effect */
-        height: 60px; /* Size of the highlight effect */
+        width: 100px; /* Size of the brightening area */
+        height: 100px; /* Size of the brightening area */
         background: rgba(243, 156, 18, 0.3); /* Brightening color */
         border-radius: 50%; /* Circular shape */
         pointer-events: none; /* Ignore pointer events */
         transform: translate(-50%, -50%); /* Center the highlight */
         transition: background 0.2s ease; /* Smooth transition for background */
+        filter: brightness(1.5); /* Increase brightness */
+        z-index: 1; /* Ensure it appears above content */
     }
 `;
 document.head.appendChild(style);
-
 
