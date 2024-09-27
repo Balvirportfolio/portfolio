@@ -149,20 +149,29 @@ footer {
 }
 
 /* Mouse Animation */
-body {
-    cursor: none; /* Hide the default cursor */
-}
-
 .mouse-pointer {
     position: fixed;
-    width: 20px; /* Smaller size for the pointer */
-    height: 20px;
+    width: 10px; /* Smaller size for the pointer */
+    height: 10px;
     border-radius: 50%; /* Adjusted for a circular shape */
     background: rgba(243, 156, 18, 0.7);
     pointer-events: none; /* Ignore pointer events */
     transition: transform 0.1s ease;
-    transform: scale(1.5); /* Scale for better visibility */
     box-shadow: 0 0 15px rgba(243, 156, 18, 0.7), 0 0 30px rgba(243, 156, 18, 0.5); /* Increased glow effect */
+}
+
+/* Brightness Effect */
+.brightness-effect {
+    position: fixed;
+    width: 100px; /* Size of the brightening area */
+    height: 100px; /* Size of the brightening area */
+    background: rgba(243, 156, 18, 0.3); /* Brightening color */
+    border-radius: 50%; /* Circular shape */
+    pointer-events: none; /* Ignore pointer events */
+    transform: translate(-50%, -50%); /* Center the highlight */
+    transition: background 0.2s ease; /* Smooth transition for background */
+    filter: brightness(1.5); /* Increase brightness */
+    z-index: 1; /* Ensure it appears above content */
 }
 
 /* Responsive Styles */
@@ -177,6 +186,7 @@ body {
         width: 100%;
     }
 }
+
 
 
 
