@@ -129,11 +129,12 @@ body {
     width: 20px; /* Size for the pointer */
     height: 20px;
     border-radius: 50%; /* Circular shape */
-    background: rgba(243, 156, 18, 0.7); /* Pointer color */
+    background: white; /* Pointer color changed to white */
     pointer-events: none; /* Ignore pointer events */
     transition: transform 0.1s ease;
     transform: scale(1.5); /* Scale for better visibility */
 }
+
 
 
 
