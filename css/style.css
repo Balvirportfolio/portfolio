@@ -209,14 +209,21 @@ body {
 
 .mouse-pointer {
     position: fixed;
-    width: 20px;
+    width: 20px; /* Size for the pointer */
     height: 20px;
-    border-radius: 50%;
-    background: rgba(243, 156, 18, 0.7);
+    border-radius: 50%; /* Circular shape */
+    background: rgba(243, 156, 18, 0.7); /* Pointer color */
     pointer-events: none; /* Ignore pointer events */
     transition: transform 0.1s ease;
     transform: scale(1.5); /* Scale for better visibility */
 }
+
+/* Adjusting background color dynamically */
+.brightened-background {
+    background: radial-gradient(circle at center, rgba(243, 156, 18, 0.6), rgba(0, 0, 0, 0.6));
+    transition: background 0.3s ease;
+}
+
 
 
 
