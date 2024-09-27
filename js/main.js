@@ -1,32 +1,22 @@
+// Select the background element
+const backgroundAnimation = document.querySelector('.background-animation');
+
 // Mouse Pointer Animation
 const mousePointer = document.createElement('div');
 mousePointer.classList.add('mouse-pointer');
 document.body.appendChild(mousePointer);
 
-// Create a brightening effect element
-const brightnessEffect = document.createElement('div');
-brightnessEffect.classList.add('brightness-effect');
-document.body.appendChild(brightnessEffect);
-
-// Update mouse pointer position
+// Update mouse pointer and background brightness effect on mousemove
 document.addEventListener('mousemove', (e) => {
     // Move the custom mouse pointer
     mousePointer.style.left = `${e.pageX}px`;
     mousePointer.style.top = `${e.pageY}px`;
 
-    // Position the brightness effect at the cursor's position
-    brightnessEffect.style.left = `${e.pageX}px`;
-    brightnessEffect.style.top = `${e.pageY}px`;
+    // Update background gradient around the cursor
+    const xPercent = (e.pageX / window.innerWidth) * 100;
+    const yPercent = (e.pageY / window.innerHeight) * 100;
 
-    // Add the class to make it visible
-    brightnessEffect.classList.add('active');
-
-    // Remove the class after a short delay
-    setTimeout(() => {
-        brightnessEffect.classList.remove('active');
-    }, 150); // Adjust this duration as needed
+    backgroundAnimation.style.background = `radial-gradient(circle at ${xPercent}% ${yPercent}%, rgba(243, 156, 18, 0.3), rgba(0, 0, 0, 0.2))`;
 });
 
-// Optional: Hide the default cursor (can remove if not desired)
-// document.body.style.cursor = 'none';
 
