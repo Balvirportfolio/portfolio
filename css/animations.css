@@ -1,0 +1,11 @@
+/* Animation Styles */
+@keyframes moveBackground {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Add any additional animations here */
