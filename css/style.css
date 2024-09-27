@@ -1,135 +1,54 @@
-/* Global Styles */
-* {
+/* Basic Page Styles */
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: black;
-    color: white;
-    line-height: 1.6;
-    overflow-x: hidden; /* Prevent horizontal scroll */
-}
-
-.background-animation {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Send to back */
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.2));
-    transition: background 0.5s ease;
-}
-
-header {
-    background: rgba(255, 255, 255, 0.1);
+    font-family: 'Poppins', sans-serif;
+    background-color: #000;
     color: #fff;
-    padding: 20px 40px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    overflow-x: hidden;
+    cursor: none; /* Hide default cursor */
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-}
-
-nav a {
-    color: #fff;
+a {
+    color: #f39c12;
     text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background 0.3s ease, color 0.3s ease;
-}
-
-nav a:hover {
-    background: #f39c12;
-    color: #000;
 }
 
 /* Hero Section */
-.hero {
+.hero-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 100px 40px;
-    animation: fadeIn 1s ease-in-out;
+    height: 100vh;
+    padding: 0 5%;
+    background: linear-gradient(45deg, #000, #222);
 }
 
-.text-container {
+.text-section {
     width: 50%;
 }
 
-.photo-container {
+.text-section h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    animation: slideIn 1s ease-out;
+}
+
+.text-section p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.image-section {
     width: 50%;
-    border: 5px solid #f39c12; /* Colored border */
-    border-radius: 10px;
-    padding: 10px;
-    transition: transform 0.3s;
 }
 
-.profile-photo {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.btn {
-    background: #f39c12;
-    color: #fff;
-    padding: 15px 25px;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: transform 0.3s ease, background 0.3s ease;
-    display: inline-block; /* Ensure block behavior */
-    margin-top: 20px; /* Space above button */
-}
-
-.btn:hover {
-    transform: scale(1.1);
-    background: #e67e22;
-}
-
-/* Adjust button position */
-.text-container p {
-    margin-bottom: 30px; /* Added margin for better spacing */
-}
-
-/* Section Styles */
-.section {
-    padding: 80px 40px;
-    animation: slideIn 1s ease-in-out;
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 2.5em;
-}
-
-.achievement-list, .project-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.achievement-list li, .project-card {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    margin: 10px;
-    width: 80%;
-    transition: transform 0.3s;
-}
-
-.achievement-list li:hover, .project-card:hover {
-    transform: translateY(-5px);
+.profile-image {
+    border: 5px solid #f39c12;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    animation: fadeIn 2s;
 }
 
 /* LinkedIn Button */
@@ -149,72 +68,41 @@ h2 {
     transform: scale(1.2);
 }
 
-footer {
-    background: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
+/* Download CV Button */
+.download-btn {
+    padding: 10px 20px;
+    border: 2px solid #f39c12;
+    color: #f39c12;
+    border-radius: 5px;
+    transition: 0.3s;
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+.download-btn:hover {
+    background-color: #f39c12;
+    color: #000;
 }
 
-@keyframes slideIn {
-    from {
-        transform: translateY(-50%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+/* Parallax Background */
+.parallax {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    background-image: url('assets/images/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
 }
 
-/* Typing Animation */
-.typing {
-    font-family: 'Courier Prime', monospace;
-    border-right: .15em solid #f39c12;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 0; /* Hidden until animated */
-    animation: typing 4s steps(30, end), blink .75s step-end infinite;
-}
-
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%; /* Full text width */
-    }
-}
-
-@keyframes blink {
-    50% {
-        border-color: transparent;
-    }
-}
-
-/* Mouse Animation */
-body {
-    cursor: none; /* Hide the default cursor */
-}
-
+/* Mouse Pointer */
 .mouse-pointer {
     position: fixed;
     width: 20px;
     height: 20px;
     border-radius: 50%;
     background: rgba(243, 156, 18, 0.7);
-    pointer-events: none; /* Ignore pointer events */
+    pointer-events: none;
     transition: transform 0.1s ease;
-    transform: scale(1.5); /* Scale for better visibility */
 }
 
