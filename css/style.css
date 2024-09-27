@@ -89,7 +89,6 @@ nav a:hover {
     transition: transform 0.3s ease, background 0.3s ease;
     display: inline-block; /* Ensure block behavior */
     margin-top: 20px; /* Space above button */
-    margin-left: 0; /* Reset left margin */
 }
 
 .btn:hover {
@@ -218,7 +217,6 @@ body {
     transition: transform 0.1s ease;
     transform: scale(1.5); /* Scale for better visibility */
 }
-
 
 
 
