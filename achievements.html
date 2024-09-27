@@ -6,6 +6,69 @@
     <title>My Achievements</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000; /* Set background color */
+            color: #FFA500; /* Text color */
+        }
+        header {
+            background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            z-index: 1000; /* Ensure header is on top */
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 0 15px; /* Spacing between links */
+        }
+        nav ul li a {
+            color: #FFA500; /* Link color */
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #FF6347; /* Change color on hover */
+        }
+        .section {
+            padding: 60px 20px; /* Add padding to avoid overlap with fixed header */
+            text-align: center;
+        }
+        .achievement-list {
+            list-style: none;
+            padding: 0;
+        }
+        .achievement-card {
+            background: rgba(255, 69, 0, 0.2); /* Light background for achievements */
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px; /* Rounded corners */
+            transition: transform 0.3s;
+        }
+        .achievement-card:hover {
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+        .linkedin-logo {
+            text-align: center;
+            margin: 20px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #222; /* Dark background for footer */
+            color: #FFA500; /* Footer text color */
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <div class="background-animation"></div>
@@ -24,14 +87,14 @@
     <section id="achievements" class="section">
         <h2>My Achievements</h2>
         <ul class="achievement-list">
-            <li>Achievement 1: Description</li>
-            <li>Achievement 2: Description</li>
-            <li>Achievement 3: Description</li>
+            <li class="achievement-card">Achievement 1: Description</li>
+            <li class="achievement-card">Achievement 2: Description</li>
+            <li class="achievement-card">Achievement 3: Description</li>
         </ul>
     </section>
 
     <div class="linkedin-logo">
-        <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
+        <a href="https://www.linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn Profile">
             <i class="fab fa-linkedin" style="font-size: 30px; color: #0077b5;"></i>
         </a>
     </div>
@@ -40,13 +103,10 @@
         <p>&copy; 2024 [Your Name]. All rights reserved.</p>
     </footer>
 
-    <script src="js/particles.js"></script>
     <script src="js/smooth-scroll.js"></script>
-    <script src="js/mouse-pointer.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
-
 
 
 
