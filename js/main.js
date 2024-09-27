@@ -1,7 +1,9 @@
+// main.js
+
 // Select the background element
 const backgroundAnimation = document.querySelector('.background-animation');
 
-// Mouse Pointer Animation
+// Create a custom mouse pointer element
 const mousePointer = document.createElement('div');
 mousePointer.classList.add('mouse-pointer');
 document.body.appendChild(mousePointer);
@@ -18,5 +20,3 @@ document.addEventListener('mousemove', (e) => {
 
     backgroundAnimation.style.background = `radial-gradient(circle at ${xPercent}% ${yPercent}%, rgba(243, 156, 18, 0.3), rgba(0, 0, 0, 0.2))`;
 });
-
-
