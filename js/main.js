@@ -1,44 +1,32 @@
-// Smooth Scroll Functionality
-document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
+// Mouse Pointer Animation
+const mousePointer = document.createElement('div');
+mousePointer.classList.add('mouse-pointer');
+document.body.appendChild(mousePointer);
 
-        const targetId = this.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
-
-        if (targetSection) {
-            // Scroll to the target section smoothly
-            targetSection.scrollIntoView({ behavior: 'smooth' });
-        }
-    });
-});
-
-// Create a div for the brightness effect
+// Create a brightening effect element
 const brightnessEffect = document.createElement('div');
 brightnessEffect.classList.add('brightness-effect');
 document.body.appendChild(brightnessEffect);
 
-// Update brightness effect position and size
+// Update mouse pointer position
 document.addEventListener('mousemove', (e) => {
+    // Move the custom mouse pointer
+    mousePointer.style.left = `${e.pageX}px`;
+    mousePointer.style.top = `${e.pageY}px`;
+
+    // Position the brightness effect at the cursor's position
     brightnessEffect.style.left = `${e.pageX}px`;
     brightnessEffect.style.top = `${e.pageY}px`;
+
+    // Add the class to make it visible
+    brightnessEffect.classList.add('active');
+
+    // Remove the class after a short delay
+    setTimeout(() => {
+        brightnessEffect.classList.remove('active');
+    }, 150); // Adjust this duration as needed
 });
 
-// Style for the brightness effect
-const style = document.createElement('style');
-style.innerHTML = `
-    .brightness-effect {
-        position: fixed;
-        width: 100px; /* Size of the brightening area */
-        height: 100px; /* Size of the brightening area */
-        background: rgba(243, 156, 18, 0.3); /* Brightening color */
-        border-radius: 50%; /* Circular shape */
-        pointer-events: none; /* Ignore pointer events */
-        transform: translate(-50%, -50%); /* Center the highlight */
-        transition: background 0.2s ease; /* Smooth transition for background */
-        filter: brightness(1.5); /* Increase brightness */
-        z-index: 1; /* Ensure it appears above content */
-    }
-`;
-document.head.appendChild(style);
+// Optional: Hide the default cursor (can remove if not desired)
+// document.body.style.cursor = 'none';
 
