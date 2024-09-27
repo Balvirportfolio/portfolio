@@ -13,8 +13,6 @@ document.querySelectorAll('nav a').forEach(anchor => {
     });
 });
 
-// Hide default cursor
-document.body.style.cursor = 'none';
 
 // Create highlight effect
 const highlightEffect = document.createElement('div');
