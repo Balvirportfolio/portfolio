@@ -96,11 +96,6 @@ nav a:hover {
     background: #e67e22;
 }
 
-/* Adjust button position */
-.text-container p {
-    margin-bottom: 30px; /* Added margin for better spacing */
-}
-
 /* Section Styles */
 .section {
     padding: 80px 40px;
@@ -217,6 +212,7 @@ body {
     transition: transform 0.1s ease;
     transform: scale(1.5); /* Scale for better visibility */
 }
+
 
 
 
